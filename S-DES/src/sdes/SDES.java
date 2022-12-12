@@ -21,27 +21,27 @@ public class SDES {
 	private JTextField p10Field;
 	private JTextField decryptField;
 	private JTextField ipField;
-	private JTextField ipdrField;
+	private JTextField decryptIprField;
 	private JTextField keyField;
-	private JTextField lsField;
-	private JTextField k1Field;
-	private JTextField ls2Field;
-	private JTextField k2Field;
+	private JTextField leftShift1Field;
+	private JTextField key1Field;
+	private JTextField leftShift2Field;
+	private JTextField key2Field;
 	private JTextField fkField;
-	private JTextField swField;
+	private JTextField switchField;
 	private JTextField fk2Field;
 	private JTextField ip2Field;
-	private JTextField fkd2Field;
-	private JTextField swdField;
-	private JTextField fkdField;
-	private JTextField ipdField;
-	private JTextField encryption2;
+	private JTextField decryptFk2Field;
+	private JTextField decryptSwitchField;
+	private JTextField decryptFkField;
+	private JTextField decryptIpField;
+	private JTextField encryption2Field;
 	private JTextField encryptionField;
 	private JLabel p10Lbl;
-	private JLabel ls1Lbl;
-	private JLabel k1Lbl;
-	private JLabel k2Lbl;
-	private JLabel ls2Lbl;
+	private JLabel leftShift1Lbl;
+	private JLabel key1Lbl;
+	private JLabel key2Lbl;
+	private JLabel leftShift2Lbl;
 	private JLabel keyLbl;
 	private JLabel ip2dLbl;
 	private JLabel fk2dLbl;
@@ -104,15 +104,15 @@ public class SDES {
 		key.setBounds(332, 35, 44, 39);
 		frmSdes.getContentPane().add(key);
 
-		JLabel plainText = new JLabel("plain Text");
-		plainText.setFont(new Font("Consolas", Font.PLAIN, 20));
-		plainText.setBounds(49, 35, 119, 39);
-		frmSdes.getContentPane().add(plainText);
+		JLabel plainTextLbl = new JLabel("plain Text");
+		plainTextLbl.setFont(new Font("Consolas", Font.PLAIN, 20));
+		plainTextLbl.setBounds(49, 35, 119, 39);
+		frmSdes.getContentPane().add(plainTextLbl);
 
-		JLabel decryptText = new JLabel("Decrypt Text");
-		decryptText.setFont(new Font("Consolas", Font.PLAIN, 20));
-		decryptText.setBounds(532, 31, 147, 47);
-		frmSdes.getContentPane().add(decryptText);
+		JLabel decryptTextLbl = new JLabel("Decrypt Text");
+		decryptTextLbl.setFont(new Font("Consolas", Font.PLAIN, 20));
+		decryptTextLbl.setBounds(532, 31, 147, 47);
+		frmSdes.getContentPane().add(decryptTextLbl);
 
 		plaintextField = new JTextField();
 		plaintextField.setBackground(SystemColor.window);
@@ -143,13 +143,13 @@ public class SDES {
 		ipField.setBounds(12, 172, 189, 35);
 		frmSdes.getContentPane().add(ipField);
 
-		ipdrField = new JTextField();
-		ipdrField.setFont(new Font("굴림", Font.BOLD, 12));
-		ipdrField.setBackground(SystemColor.activeCaption);
-		ipdrField.setEditable(false);
-		ipdrField.setColumns(10);
-		ipdrField.setBounds(515, 172, 189, 35);
-		frmSdes.getContentPane().add(ipdrField);
+		decryptIprField = new JTextField();
+		decryptIprField.setFont(new Font("굴림", Font.BOLD, 12));
+		decryptIprField.setBackground(SystemColor.activeCaption);
+		decryptIprField.setEditable(false);
+		decryptIprField.setColumns(10);
+		decryptIprField.setBounds(515, 172, 189, 35);
+		frmSdes.getContentPane().add(decryptIprField);
 
 		keyField = new JTextField();
 		keyField.setBackground(SystemColor.window);
@@ -157,37 +157,37 @@ public class SDES {
 		keyField.setBounds(264, 85, 189, 35);
 		frmSdes.getContentPane().add(keyField);
 
-		lsField = new JTextField();
-		lsField.setFont(new Font("굴림", Font.BOLD, 12));
-		lsField.setBackground(SystemColor.activeCaption);
-		lsField.setEditable(false);
-		lsField.setColumns(10);
-		lsField.setBounds(264, 248, 189, 35);
-		frmSdes.getContentPane().add(lsField);
+		leftShift1Field = new JTextField();
+		leftShift1Field.setFont(new Font("굴림", Font.BOLD, 12));
+		leftShift1Field.setBackground(SystemColor.activeCaption);
+		leftShift1Field.setEditable(false);
+		leftShift1Field.setColumns(10);
+		leftShift1Field.setBounds(264, 248, 189, 35);
+		frmSdes.getContentPane().add(leftShift1Field);
 
-		k1Field = new JTextField();
-		k1Field.setFont(new Font("굴림", Font.BOLD, 12));
-		k1Field.setBackground(SystemColor.activeCaption);
-		k1Field.setEditable(false);
-		k1Field.setColumns(10);
-		k1Field.setBounds(264, 327, 189, 35);
-		frmSdes.getContentPane().add(k1Field);
+		key1Field = new JTextField();
+		key1Field.setFont(new Font("굴림", Font.BOLD, 12));
+		key1Field.setBackground(SystemColor.activeCaption);
+		key1Field.setEditable(false);
+		key1Field.setColumns(10);
+		key1Field.setBounds(264, 327, 189, 35);
+		frmSdes.getContentPane().add(key1Field);
 
-		ls2Field = new JTextField();
-		ls2Field.setFont(new Font("굴림", Font.BOLD, 12));
-		ls2Field.setBackground(SystemColor.activeCaption);
-		ls2Field.setEditable(false);
-		ls2Field.setColumns(10);
-		ls2Field.setBounds(264, 397, 189, 35);
-		frmSdes.getContentPane().add(ls2Field);
+		leftShift2Field = new JTextField();
+		leftShift2Field.setFont(new Font("굴림", Font.BOLD, 12));
+		leftShift2Field.setBackground(SystemColor.activeCaption);
+		leftShift2Field.setEditable(false);
+		leftShift2Field.setColumns(10);
+		leftShift2Field.setBounds(264, 397, 189, 35);
+		frmSdes.getContentPane().add(leftShift2Field);
 
-		k2Field = new JTextField();
-		k2Field.setFont(new Font("굴림", Font.BOLD, 12));
-		k2Field.setBackground(SystemColor.activeCaption);
-		k2Field.setEditable(false);
-		k2Field.setColumns(10);
-		k2Field.setBounds(264, 465, 189, 35);
-		frmSdes.getContentPane().add(k2Field);
+		key2Field = new JTextField();
+		key2Field.setFont(new Font("굴림", Font.BOLD, 12));
+		key2Field.setBackground(SystemColor.activeCaption);
+		key2Field.setEditable(false);
+		key2Field.setColumns(10);
+		key2Field.setBounds(264, 465, 189, 35);
+		frmSdes.getContentPane().add(key2Field);
 
 		fkField = new JTextField();
 		fkField.setFont(new Font("굴림", Font.BOLD, 12));
@@ -197,13 +197,13 @@ public class SDES {
 		fkField.setBounds(12, 248, 189, 35);
 		frmSdes.getContentPane().add(fkField);
 
-		swField = new JTextField();
-		swField.setFont(new Font("굴림", Font.BOLD, 12));
-		swField.setBackground(SystemColor.activeCaption);
-		swField.setEditable(false);
-		swField.setColumns(10);
-		swField.setBounds(12, 327, 189, 35);
-		frmSdes.getContentPane().add(swField);
+		switchField = new JTextField();
+		switchField.setFont(new Font("굴림", Font.BOLD, 12));
+		switchField.setBackground(SystemColor.activeCaption);
+		switchField.setEditable(false);
+		switchField.setColumns(10);
+		switchField.setBounds(12, 327, 189, 35);
+		frmSdes.getContentPane().add(switchField);
 
 		fk2Field = new JTextField();
 		fk2Field.setFont(new Font("굴림", Font.BOLD, 12));
@@ -221,45 +221,45 @@ public class SDES {
 		ip2Field.setBounds(12, 465, 189, 35);
 		frmSdes.getContentPane().add(ip2Field);
 
-		fkd2Field = new JTextField();
-		fkd2Field.setFont(new Font("굴림", Font.BOLD, 12));
-		fkd2Field.setBackground(SystemColor.activeCaption);
-		fkd2Field.setEditable(false);
-		fkd2Field.setColumns(10);
-		fkd2Field.setBounds(515, 248, 189, 35);
-		frmSdes.getContentPane().add(fkd2Field);
+		decryptFk2Field = new JTextField();
+		decryptFk2Field.setFont(new Font("굴림", Font.BOLD, 12));
+		decryptFk2Field.setBackground(SystemColor.activeCaption);
+		decryptFk2Field.setEditable(false);
+		decryptFk2Field.setColumns(10);
+		decryptFk2Field.setBounds(515, 248, 189, 35);
+		frmSdes.getContentPane().add(decryptFk2Field);
 
-		swdField = new JTextField();
-		swdField.setFont(new Font("굴림", Font.BOLD, 12));
-		swdField.setBackground(SystemColor.activeCaption);
-		swdField.setEditable(false);
-		swdField.setColumns(10);
-		swdField.setBounds(515, 327, 189, 35);
-		frmSdes.getContentPane().add(swdField);
+		decryptSwitchField = new JTextField();
+		decryptSwitchField.setFont(new Font("굴림", Font.BOLD, 12));
+		decryptSwitchField.setBackground(SystemColor.activeCaption);
+		decryptSwitchField.setEditable(false);
+		decryptSwitchField.setColumns(10);
+		decryptSwitchField.setBounds(515, 327, 189, 35);
+		frmSdes.getContentPane().add(decryptSwitchField);
 
-		fkdField = new JTextField();
-		fkdField.setFont(new Font("굴림", Font.BOLD, 12));
-		fkdField.setBackground(SystemColor.activeCaption);
-		fkdField.setEditable(false);
-		fkdField.setColumns(10);
-		fkdField.setBounds(515, 397, 189, 35);
-		frmSdes.getContentPane().add(fkdField);
+		decryptFkField = new JTextField();
+		decryptFkField.setFont(new Font("굴림", Font.BOLD, 12));
+		decryptFkField.setBackground(SystemColor.activeCaption);
+		decryptFkField.setEditable(false);
+		decryptFkField.setColumns(10);
+		decryptFkField.setBounds(515, 397, 189, 35);
+		frmSdes.getContentPane().add(decryptFkField);
 
-		ipdField = new JTextField();
-		ipdField.setFont(new Font("굴림", Font.BOLD, 12));
-		ipdField.setBackground(SystemColor.activeCaption);
-		ipdField.setEditable(false);
-		ipdField.setColumns(10);
-		ipdField.setBounds(515, 465, 189, 35);
-		frmSdes.getContentPane().add(ipdField);
+		decryptIpField = new JTextField();
+		decryptIpField.setFont(new Font("굴림", Font.BOLD, 12));
+		decryptIpField.setBackground(SystemColor.activeCaption);
+		decryptIpField.setEditable(false);
+		decryptIpField.setColumns(10);
+		decryptIpField.setBounds(515, 465, 189, 35);
+		frmSdes.getContentPane().add(decryptIpField);
 
-		encryption2 = new JTextField();
-		encryption2.setFont(new Font("굴림", Font.BOLD, 12));
-		encryption2.setBackground(SystemColor.activeCaption);
-		encryption2.setEditable(false);
-		encryption2.setColumns(10);
-		encryption2.setBounds(515, 539, 189, 69);
-		frmSdes.getContentPane().add(encryption2);
+		encryption2Field = new JTextField();
+		encryption2Field.setFont(new Font("굴림", Font.BOLD, 12));
+		encryption2Field.setBackground(SystemColor.activeCaption);
+		encryption2Field.setEditable(false);
+		encryption2Field.setColumns(10);
+		encryption2Field.setBounds(515, 539, 189, 69);
+		frmSdes.getContentPane().add(encryption2Field);
 
 		encryptionField = new JTextField();
 		encryptionField.setFont(new Font("굴림", Font.BOLD, 12));
@@ -273,21 +273,21 @@ public class SDES {
 		p10Lbl.setBounds(264, 159, 57, 15);
 		frmSdes.getContentPane().add(p10Lbl);
 
-		ls1Lbl = new JLabel("1bit Left Shift");
-		ls1Lbl.setBounds(264, 234, 87, 15);
-		frmSdes.getContentPane().add(ls1Lbl);
+		leftShift1Lbl = new JLabel("1bit Left Shift");
+		leftShift1Lbl.setBounds(264, 234, 87, 15);
+		frmSdes.getContentPane().add(leftShift1Lbl);
 
-		k1Lbl = new JLabel("K1");
-		k1Lbl.setBounds(264, 308, 57, 15);
-		frmSdes.getContentPane().add(k1Lbl);
+		key1Lbl = new JLabel("K1");
+		key1Lbl.setBounds(264, 308, 57, 15);
+		frmSdes.getContentPane().add(key1Lbl);
 
-		k2Lbl = new JLabel("K2");
-		k2Lbl.setBounds(264, 450, 57, 15);
-		frmSdes.getContentPane().add(k2Lbl);
+		key2Lbl = new JLabel("K2");
+		key2Lbl.setBounds(264, 450, 57, 15);
+		frmSdes.getContentPane().add(key2Lbl);
 
-		ls2Lbl = new JLabel("2bit Left Shift");
-		ls2Lbl.setBounds(264, 384, 97, 15);
-		frmSdes.getContentPane().add(ls2Lbl);
+		leftShift2Lbl = new JLabel("2bit Left Shift");
+		leftShift2Lbl.setBounds(264, 384, 97, 15);
+		frmSdes.getContentPane().add(leftShift2Lbl);
 
 		JLabel ipLbl = new JLabel("IP");
 		ipLbl.setBounds(12, 159, 57, 15);
@@ -297,9 +297,9 @@ public class SDES {
 		fkLbl.setBounds(12, 234, 57, 15);
 		frmSdes.getContentPane().add(fkLbl);
 
-		JLabel swLbl = new JLabel("SW");
-		swLbl.setBounds(12, 308, 57, 15);
-		frmSdes.getContentPane().add(swLbl);
+		JLabel switchLbl = new JLabel("SW");
+		switchLbl.setBounds(12, 308, 57, 15);
+		frmSdes.getContentPane().add(switchLbl);
 
 		JLabel fk2Lbl = new JLabel("fᵏ");
 		fk2Lbl.setBounds(12, 384, 57, 15);
@@ -358,25 +358,25 @@ public class SDES {
 				plaintextField.setText("");
 				keyField.setText("");
 				p10Field.setText("");
-				lsField.setText("");
-				ls2Field.setText("");
-				k1Field.setText("");
-				k2Field.setText("");
+				leftShift1Field.setText("");
+				leftShift2Field.setText("");
+				key1Field.setText("");
+				key2Field.setText("");
 
 				encryptionField.setText("");
-				encryption2.setText("");
+				encryption2Field.setText("");
 				ipField.setText("");
 				fk2Field.setText("");
 				fkField.setText("");
-				swField.setText("");
+				switchField.setText("");
 				ip2Field.setText("");
 
 				decryptField.setText("");
-				ipdrField.setText("");
-				swdField.setText("");
-				fkd2Field.setText("");
-				fkdField.setText("");
-				ipdField.setText("");
+				decryptIprField.setText("");
+				decryptSwitchField.setText("");
+				decryptFk2Field.setText("");
+				decryptFkField.setText("");
+				decryptIpField.setText("");
 
 			}
 
@@ -429,16 +429,16 @@ public class SDES {
 				setFieldBlur(p10Field);
 				setlsText();
 				Thread.sleep(300);
-				setFieldBlur(lsField);
+				setFieldBlur(leftShift1Field);
 				setK1Text();
 				Thread.sleep(300);
-				setFieldBlur(k1Field);
+				setFieldBlur(key1Field);
 				setls2Text();
 				Thread.sleep(300);
-				setFieldBlur(ls2Field);
+				setFieldBlur(leftShift2Field);
 				setK2Text();
 				Thread.sleep(300);
-				setFieldBlur(k2Field);
+				setFieldBlur(key2Field);
 			} catch (InterruptedException e1) {
 			}
 
@@ -455,7 +455,7 @@ public class SDES {
 						setFieldBlur(fkField);
 						setSWText();
 						Thread.sleep(300);
-						setFieldBlur(swField);
+						setFieldBlur(switchField);
 						setFk2Text();
 						Thread.sleep(300);
 						setFieldBlur(fk2Field);
@@ -466,19 +466,19 @@ public class SDES {
 						Thread.sleep(300);
 						setIpdText();
 						Thread.sleep(300);
-						setFieldBlur(ipdField);
+						setFieldBlur(decryptIpField);
 						setfkdText();
 						Thread.sleep(300);
-						setFieldBlur(fkdField);
+						setFieldBlur(decryptFkField);
 						setswdText();
 						Thread.sleep(300);
-						setFieldBlur(swdField);
+						setFieldBlur(decryptSwitchField);
 						setfkd2Text();
 						Thread.sleep(300);
-						setFieldBlur(fkd2Field);
+						setFieldBlur(decryptFk2Field);
 						setIpdrText();
 						Thread.sleep(300);
-						setFieldBlur(ipdrField);
+						setFieldBlur(decryptIprField);
 						setDecryptText();
 						Thread.sleep(300);
 					} else {
@@ -491,7 +491,7 @@ public class SDES {
 						setFieldBlur(fkField);
 						setSWText();
 						Thread.sleep(300);
-						setFieldBlur(swField);
+						setFieldBlur(switchField);
 						setFk2Text();
 						Thread.sleep(300);
 						setFieldBlur(fk2Field);
@@ -508,7 +508,7 @@ public class SDES {
 						setFieldBlur(fkField);
 						setSWText();
 						Thread.sleep(300);
-						setFieldBlur(swField);
+						setFieldBlur(switchField);
 						setFk2Text();
 						Thread.sleep(300);
 						setFieldBlur(fk2Field);
@@ -517,41 +517,41 @@ public class SDES {
 						setFieldBlur(ip2Field);
 						setHEncryptionText();
 
-						savePlainText(encryption2.getText().charAt(i) + "");
+						savePlainText(encryption2Field.getText().charAt(i) + "");
 						Thread.sleep(300);
 						setIpdH1Text();
 						Thread.sleep(300);
-						setFieldBlur(ipdField);
+						setFieldBlur(decryptIpField);
 						setfkdText();
 						Thread.sleep(300);
-						setFieldBlur(fkdField);
+						setFieldBlur(decryptFkField);
 						setswdText();
 						Thread.sleep(300);
-						setFieldBlur(swdField);
+						setFieldBlur(decryptSwitchField);
 						setfkd2Text();
 						Thread.sleep(300);
-						setFieldBlur(fkd2Field);
+						setFieldBlur(decryptFk2Field);
 						setIpdrText();
 						setDAlpaValue();
 						Thread.sleep(300);
-						setFieldBlur(ipdrField);
+						setFieldBlur(decryptIprField);
 
 						Thread.sleep(300);
 						setIpdH2Text();
 						Thread.sleep(300);
-						setFieldBlur(ipdField);
+						setFieldBlur(decryptIpField);
 						setfkdText();
 						Thread.sleep(300);
-						setFieldBlur(fkdField);
+						setFieldBlur(decryptFkField);
 						setswdText();
 						Thread.sleep(300);
-						setFieldBlur(swdField);
+						setFieldBlur(decryptSwitchField);
 						setfkd2Text();
 						Thread.sleep(300);
-						setFieldBlur(fkd2Field);
+						setFieldBlur(decryptFk2Field);
 						setIpdrText();
 						Thread.sleep(300);
-						setFieldBlur(ipdrField);
+						setFieldBlur(decryptIprField);
 						setHDecryptText();
 
 						Thread.sleep(300);
@@ -575,28 +575,28 @@ public class SDES {
 
 	public void setlsText() {
 		makeKey.getLS1(makeKey.getP10str());
-		lsField.setText(makeKey.getLs1str());
-		setFieldFocus(lsField);
+		leftShift1Field.setText(makeKey.getLs1str());
+		setFieldFocus(leftShift1Field);
 
 	}
 
 	public void setK1Text() {
 		makeKey.setKey1(makeKey.getKey(makeKey.getLs1str()));
-		k1Field.setText(makeKey.getKey1());
-		setFieldFocus(k1Field);
+		key1Field.setText(makeKey.getKey1());
+		setFieldFocus(key1Field);
 
 	}
 
 	public void setls2Text() {
 		makeKey.getLS2(makeKey.getLs1str());
-		ls2Field.setText(makeKey.getLs2str());
-		setFieldFocus(ls2Field);
+		leftShift2Field.setText(makeKey.getLs2str());
+		setFieldFocus(leftShift2Field);
 	}
 
 	public void setK2Text() {
 		makeKey.setKey2(makeKey.getKey(makeKey.getLs2str()));
-		k2Field.setText(makeKey.getKey2());
-		setFieldFocus(k2Field);
+		key2Field.setText(makeKey.getKey2());
+		setFieldFocus(key2Field);
 
 	}
 
@@ -637,9 +637,9 @@ public class SDES {
 
 	public void setSWText() {
 		encryption.SW(encryption.getFk_str());
-		swField.setText(encryption.getSw_str());
+		switchField.setText(encryption.getSw_str());
 		encryption.setIp_str(encryption.getSw_str());
-		setFieldFocus(swField);
+		setFieldFocus(switchField);
 	}
 
 	public void setFk2Text() {
@@ -663,7 +663,7 @@ public class SDES {
 		int alpa = Integer.parseInt(encryption.getIpr_str(), 2);
 		char calpa = (char) alpa;
 		encryptionField.setText(encryptionField.getText() + calpa + "");
-		encryption2.setText(encryption2.getText() + calpa + "");
+		encryption2Field.setText(encryption2Field.getText() + calpa + "");
 	}
 
 	public void setAlpaValue() {
@@ -676,29 +676,29 @@ public class SDES {
 		String uni = String.format("%04x", code);
 		Character c = (char) Integer.parseInt(uni, 16);
 		encryptionField.setText(encryptionField.getText() + c.toString());
-		encryption2.setText(encryption2.getText() + c.toString());
+		encryption2Field.setText(encryption2Field.getText() + c.toString());
 
 	}
 
 	public void setIpdText() {
-		encryption.convertUnicode(encryption2.getText());
+		encryption.convertUnicode(encryption2Field.getText());
 		encryption.getIP(encryption.getBinary());
-		ipdField.setText(encryption.getIp_str());
-		setFieldFocus(ipdField);
+		decryptIpField.setText(encryption.getIp_str());
+		setFieldFocus(decryptIpField);
 
 	}
 
 	public void setIpdH1Text() {
 		encryption.convertUnicodeH(encryption.getPlainText());
 		encryption.getIP(encryption.getBinary());
-		ipdField.setText(encryption.getIp_str());
-		setFieldFocus(ipdField);
+		decryptIpField.setText(encryption.getIp_str());
+		setFieldFocus(decryptIpField);
 	}
 
 	public void setIpdH2Text() {
 		encryption.getIP(encryption.getBinary2());
-		ipdField.setText(encryption.getIp_str());
-		setFieldFocus(ipdField);
+		decryptIpField.setText(encryption.getIp_str());
+		setFieldFocus(decryptIpField);
 	}
 
 	public void setfkdText() {
@@ -708,15 +708,15 @@ public class SDES {
 		encryption.setS1Value(encryption.getS1());
 		encryption.P4(encryption.getSbox());
 		encryption.p4XOR(encryption.getP4(), encryption.getIp_str());
-		fkdField.setText(encryption.getFk_str());
-		setFieldFocus(fkdField);
+		decryptFkField.setText(encryption.getFk_str());
+		setFieldFocus(decryptFkField);
 	}
 
 	public void setswdText() {
 		encryption.SW(encryption.getFk_str());
-		swdField.setText(encryption.getSw_str());
+		decryptSwitchField.setText(encryption.getSw_str());
 		encryption.setIp_str(encryption.getSw_str());
-		setFieldFocus(swdField);
+		setFieldFocus(decryptSwitchField);
 	}
 
 	public void setfkd2Text() {
@@ -726,14 +726,14 @@ public class SDES {
 		encryption.setS1Value(encryption.getS1());
 		encryption.P4(encryption.getSbox());
 		encryption.p4XOR(encryption.getP4(), encryption.getIp_str());
-		fkd2Field.setText(encryption.getFk_str());
-		setFieldFocus(fkd2Field);
+		decryptFk2Field.setText(encryption.getFk_str());
+		setFieldFocus(decryptFk2Field);
 	}
 
 	public void setIpdrText() {
 		encryption.getIPR(encryption.getFk_str());
-		ipdrField.setText(encryption.getIpr_str());
-		setFieldFocus(ipdrField);
+		decryptIprField.setText(encryption.getIpr_str());
+		setFieldFocus(decryptIprField);
 	}
 
 	public void setDecryptText() {

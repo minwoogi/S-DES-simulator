@@ -285,7 +285,7 @@ public class Encryption {
 	}
 
 	public void convertUnicodeH(String val) {
-		getBinaryArr((int)val.charAt(0), 16);
+		getBinaryArr((int) val.charAt(0), 16);
 	}
 
 	public void getBinaryArr(int key, int length) {
